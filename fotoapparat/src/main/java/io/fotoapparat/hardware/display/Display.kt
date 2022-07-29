@@ -14,7 +14,7 @@ import io.fotoapparat.hardware.orientation.Orientation.Vertical.ReversePortrait
  */
 internal open class Display(context: Context) {
 
-    private val display = context.getDisplay()
+    private val display = context.display()
 
     /**
      * Returns the orientation of the screen.
@@ -29,4 +29,4 @@ internal open class Display(context: Context) {
 
 }
 
-private fun Context.getDisplay() = (getSystemService(Context.WINDOW_SERVICE) as WindowManager).defaultDisplay
+private fun Context.display() = (getSystemService(Context.WINDOW_SERVICE) as WindowManager).defaultDisplay

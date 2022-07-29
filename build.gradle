@@ -14,10 +14,9 @@ buildscript {
                 name   : '1.0.0',
                 sdk    : [
                         minimum: 14,
-                        target : 28
+                        target : 33
                 ],
                 android: [
-                        buildTools: '28.0.3',
                         appcompat   : '1.1.0',
                         annotation   : '1.1.0',
                         exifinterface : '1.0.0'
