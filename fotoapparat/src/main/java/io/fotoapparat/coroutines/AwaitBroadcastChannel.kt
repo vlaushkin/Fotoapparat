@@ -23,7 +23,7 @@ internal class AwaitBroadcastChannel<T>(
 
     override fun offer(element: T): Boolean {
         deferred.complete(true)
-        return channel.offer(element)
+        return channel.trySend(element).isSuccess
     }
 
     override suspend fun send(element: T) {
